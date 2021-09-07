@@ -3,6 +3,7 @@ import * as THREE from "three";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { Physics, usePlane, useSphere } from "@react-three/cannon";
 import { paletteData } from "./paletteData";
+import Post from "./Post";
 
 const PaletteSelector = ({ setSelectedPallete }) => {
   const [number, setNumber] = useState(null);
@@ -20,9 +21,8 @@ const PaletteSelector = ({ setSelectedPallete }) => {
         style={{
           textAlign: "center",
         }}
-        className=""
       >
-        Enter your pallete number
+        Enter your open palette number
       </h1>
       <form
         style={{
@@ -88,6 +88,7 @@ export default function App() {
           <InstancedSpheres selectedPallete={selectedPallete} />
         </group>
       </Physics>
+      <Post />
     </Canvas>
   );
 }
@@ -169,7 +170,10 @@ function InstancedSpheres({ count = 200, selectedPallete }) {
           args={[colors, 3]}
         />
       </sphereBufferGeometry>
-      <meshPhongMaterial attach="material" vertexColors={THREE.VertexColors} />
+      <meshLambertMaterial
+        attach="material"
+        vertexColors={THREE.VertexColors}
+      />
     </instancedMesh>
   );
 }
