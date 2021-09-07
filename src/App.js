@@ -155,7 +155,7 @@ function InstancedSpheres({ count = 200, selectedPallete }) {
         .convertSRGBToLinear()
         .toArray(array, i * 3);
     return array;
-  }, [count, colorsArray]);
+  }, [count, selectedPallete]);
 
   return (
     <instancedMesh
