@@ -40,6 +40,19 @@ const PaletteSelector = ({ setSelectedPallete }) => {
         <br />
         <button>Start</button>
       </form>
+      <h3 style={{ color: "black" }}>
+        Code lovingly thrifted from{" "}
+        <a style={{ color: "black" }} href="https://twitter.com/0xca0a">
+          @0xca0a
+        </a>
+        , codesandbox{" "}
+        <a
+          style={{ color: "black" }}
+          href="https://codesandbox.io/s/ball-pit-1-mvkqs?file=/src/Post.js"
+        >
+          here
+        </a>
+      </h3>
     </div>
   );
 };
