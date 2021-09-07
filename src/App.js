@@ -38,7 +38,7 @@ const PaletteSelector = ({ setSelectedPallete }) => {
           onChange={(e) => setNumber(e.target.value)}
         ></input>
         <br />
-        <button>Start</button>
+        <button>Open up this pit</button>
       </form>
       <h3 style={{ color: "black" }}>
         Code lovingly thrifted from{" "}
